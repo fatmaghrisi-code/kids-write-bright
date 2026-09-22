@@ -77,7 +77,7 @@ export const LETTERS: Record<string, LetterSpec> = {
       // Reference upper sweep: a shallow left-to-right arc ending in the rounded tip.
       "M52 198 C 94 173, 126 178, 166 195 C 208 213, 246 226, 288 225",
       // Reference lower stroke: cross beneath the upper sweep, then form the deep open bowl.
-      "M243 246 C 184 237, 136 253, 91 287 C 48 320, 34 364, 43 407 C 54 459, 101 486, 160 487 C 204 488, 245 477, 276 458",
+      "M288 225 C 271 231, 256 240, 243 246 C 184 237, 136 253, 91 287 C 48 320, 34 364, 43 407 C 54 459, 101 486, 160 487 C 204 488, 245 477, 276 458",
     ],
     widths: [43, 47],
     dots: [{ cx: 157, cy: 352 }],
@@ -91,7 +91,7 @@ export const LETTERS: Record<string, LetterSpec> = {
     strokes: [
       // Same worksheet body as جيم, without a dot.
       "M52 198 C 94 173, 126 178, 166 195 C 208 213, 246 226, 288 225",
-      "M243 246 C 184 237, 136 253, 91 287 C 48 320, 34 364, 43 407 C 54 459, 101 486, 160 487 C 204 488, 245 477, 276 458",
+      "M288 225 C 271 231, 256 240, 243 246 C 184 237, 136 253, 91 287 C 48 320, 34 364, 43 407 C 54 459, 101 486, 160 487 C 204 488, 245 477, 276 458",
     ],
     widths: [43, 47],
     guideArrows: [[0.03, 0.98], [0.03, 0.48, 0.98]],
@@ -103,7 +103,7 @@ export const LETTERS: Record<string, LetterSpec> = {
     strokes: [
       // Same worksheet body as جيم, with its dot moved above.
       "M52 198 C 94 173, 126 178, 166 195 C 208 213, 246 226, 288 225",
-      "M243 246 C 184 237, 136 253, 91 287 C 48 320, 34 364, 43 407 C 54 459, 101 486, 160 487 C 204 488, 245 477, 276 458",
+      "M288 225 C 271 231, 256 240, 243 246 C 184 237, 136 253, 91 287 C 48 320, 34 364, 43 407 C 54 459, 101 486, 160 487 C 204 488, 245 477, 276 458",
     ],
     widths: [43, 47],
     dots: [{ cx: 157, cy: 106 }],
@@ -172,11 +172,15 @@ export const LETTERS: Record<string, LetterSpec> = {
     id: "saad",
     name: "صاد",
     viewBox: "0 0 430 570",
+    // Identical to daad's worksheet shape, but with no dot.
     strokes: [
-      "M276 208 C 392 160, 432 262, 352 300 C 298 324, 258 278, 228 230",
-      "M228 230 C 220 326, 200 372, 172 392 C 130 420, 68 406, 56 348 C 50 320, 52 300, 56 286",
+      // The worksheet's right-hand teardrop, flowing back into the join.
+      "M227 306 C 250 262, 283 218, 327 206 C 374 193, 409 226, 410 266 C 411 307, 373 333, 329 334 C 289 335, 252 324, 227 306",
+      // Join, tall shoulder, and the broad left bowl.
+      "M227 306 C 206 316, 196 301, 190 272 L181 236 C 173 205, 151 205, 154 239 L170 321 C 182 384, 153 422, 104 425 C 53 429, 24 390, 29 338 C 32 306, 40 280, 52 261",
     ],
-    widths: [48, 48],
+    widths: [39, 43],
+    guideArrows: [[0.04, 0.5, 0.96], [0.04, 0.5, 0.96]],
   },
   daad: {
     id: "daad",
@@ -328,13 +332,16 @@ export const LETTERS: Record<string, LetterSpec> = {
   waw: {
     id: "waw",
     name: "واو",
-    viewBox: "0 0 273 594",
+    // waaw-2.png worksheet: ONE bold circular head with a single teardrop
+    // counter, tail flowing from the head's right side down and hooking left.
+    // Single continuous stroke: start at the right of the head, trace the
+    // loop clockwise (bottom -> left -> top -> right), then descend the tail.
+    viewBox: "0 0 273 595",
     strokes: [
-      // Rounded head followed by the long descending hook in the reference.
-      "M202 181 C 174 139, 116 131, 73 163 C 31 195, 25 257, 58 299 C 89 339, 151 349, 198 319 C 213 286, 209 222, 181 184 C 158 153, 112 163, 100 204 C 89 243, 108 278, 141 282 C 165 285, 186 271, 200 251 C 210 327, 179 398, 124 432 C 91 452, 64 465, 49 466",
+      "M212 212 C 212 257, 175 294, 130 294 C 85 294, 48 257, 48 212 C 48 167, 85 130, 130 130 C 175 130, 212 167, 212 212 C 216 260, 213 330, 200 375 C 188 415, 155 440, 115 450 C 90 456, 65 457, 48 450",
     ],
-    widths: [42],
-    guideArrows: [[0.03, 0.23, 0.45, 0.68, 0.97]],
+    widths: [62],
+    guideArrows: [[0.16, 0.48, 0.88]],
   },
   yaa: {
     id: "yaa",
